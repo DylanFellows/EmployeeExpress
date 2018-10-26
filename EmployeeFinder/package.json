@@ -1,10 +1,11 @@
 {
   "name": "employeefinder",
   "version": "1.0.0",
-  "description": "",
+  "description": "In this activity, you'll build a compatibility-based \"EmployeeFinder\" application. This full-stack site will take in results from your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +14,6 @@
     "express": "^4.16.4",
     "mysql": "^2.16.0",
     "require": "^2.4.20"
-  }
+  },
+  "devDependencies": {}
 }
