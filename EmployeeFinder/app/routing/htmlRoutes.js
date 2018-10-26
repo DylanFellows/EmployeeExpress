@@ -5,16 +5,21 @@ const mysql = require('mysql');
 // Declare constant variables to be used throughout
 const questionsQuery = 'SELECT question_text FROM question';
 const employeeQuery = 'SELECT empl_json FROM employee order by id';
+let config;
 
 
  // Establish connection to db
- const connection = mysql.createConnection({
+if(process.env.JAWSDB_URL){
+    config = process.env.JAWSDB_URL
+}else{
+    config = {
     host: 'localhost',
     port: 3306,
     user: 'root',
     password: 'root',
     database: 'employee_db'
-});
+}}
+ const connection = mysql.createConnection(config);
 
 module.exports = (function (app) {
 
